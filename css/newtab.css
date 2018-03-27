@@ -1,0 +1,44 @@
+.nav{
+    width: 1000px;
+    margin:50px auto;
+}
+li{
+    padding: 1px;
+    display: inline-block;
+    vertical-align: top;
+    color: #000;
+    height: 86px;
+    width: 86px;
+    margin-top: 26px;
+    text-align: center;
+}
+li a{
+    display: block;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid transparent;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    padding: 6px 0 0 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+li a svg{
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    vertical-align: top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+li a .title{
+    display: block;
+    line-height: 32px;
+    font-family: sans-serif;
+    color: #333;
+    font-size: 16px;
+}
