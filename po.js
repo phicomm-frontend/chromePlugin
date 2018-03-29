@@ -67,7 +67,7 @@ var app = new Vue({
             option: '1',
             type: "trending",
             week: "day",
-            value: "javascipt",
+            value: "javascript",
             tables: []
         }
     },
