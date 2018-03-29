@@ -87,6 +87,7 @@ html{
     display: flex;
     flex-direction: column;
     overflow: auto;
+    width: 100%;
 }
 .wrap-content li{
     min-height: 13rem;
