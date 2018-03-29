@@ -19,9 +19,17 @@
     "persistent": true,
     "scripts": [ "background.js" ]
   },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "permissions": [
-    "activeTab",
-    "https://ajax.googleapis.com/"
+    "contextMenus", // 右键菜单
+    "tabs", // 标签
+    "notifications", // 通知
+    "webRequest", // web请求
+    "webRequestBlocking", // 阻塞式web请求
+    "storage", // 插件本地存储
+    "https://ajax.googleapis.com/",
+    "http://*/*",
+    "https://*/*"
   ],
   "chrome_url_overrides" : {
     "newtab": "newtab.html"
