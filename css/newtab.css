@@ -28,6 +28,37 @@ html{
     -ms-user-select: none;
     user-select: none;
 }
+.search-box{
+    margin:auto;
+}
+.logo{
+    float:left;
+    margin-right:8px;
+}
+.search{
+    float:left;
+    height:40px;
+}
+.input{
+    float:left;
+    width:400px;
+    height:32px;
+    border:1px solid #3385ff;
+    padding-left:8px;
+    outline:none;
+}
+:focus {
+    outline: none;
+}
+.button{
+    float:left;
+    width:100px;
+    height:34px;
+    border:none;
+    background:#3385ff;
+    font-size:16px;
+    color:#fff;
+}
 .main-area{
     flex: 1 1 auto;
     display: -ms-flexbox;
