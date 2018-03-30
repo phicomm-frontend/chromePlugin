@@ -166,7 +166,7 @@ input:-webkit-autofill {
     vertical-align: top;
     color: #000;
     width: 7.8rem;
-    margin: 0.4rem 0.22rem;
+    margin: 0.4rem 0.06rem;
     text-align: center;
 }
 .entry-list li a{
@@ -201,7 +201,7 @@ input:-webkit-autofill {
 }
 .source{
     flex: 0 0 auto;
-    width: 38rem;
+    width: 36rem;
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -252,8 +252,10 @@ input:-webkit-autofill {
     flex: 1 1 auto;
     position: relative;
     /*overflow-y: hidden;*/
-    padding-right: .8rem;
+    /*padding-right: .8rem;*/
     overflow-y: scroll;
+    background: #fff;
+    margin-bottom: 8px;
 }
 .nav-inner{
     border-radius: 2px;
