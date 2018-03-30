@@ -164,7 +164,7 @@ input:-webkit-autofill {
     vertical-align: top;
     color: #000;
     /* height: 86px; */
-    width: 6.8rem;
+    width: 7.8rem;
     margin: 0.4rem 0.22rem;
     text-align: center;
 }
@@ -200,7 +200,7 @@ input:-webkit-autofill {
 }
 .source{
     flex: 0 0 auto;
-    width: 33.97rem;
+    width: 38rem;
     position: relative;
     display: -ms-flexbox;
     display: flex;
