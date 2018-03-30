@@ -34,13 +34,14 @@ html{
 }
 .header img{
     width: 13rem;
+    padding-left: 0.5rem;
 }
 .search-area{
     flex: 0 0 auto;
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    margin: 2rem 1.8rem 2rem 1.8rem;
+    margin: 1.2rem 1.8rem 1.2rem 1.8rem;
     overflow: hidden;
     background: #fff;
     border-radius:2px;
@@ -271,6 +272,9 @@ input:-webkit-autofill {
 .nav-inner .logo img{
     width: 50px;
     height: 50px;
+}
+.wrap .el-input__inner {
+    height: 100%;
 }
 .out-side-nav{ // 外部导航
 
