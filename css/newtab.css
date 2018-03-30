@@ -96,7 +96,7 @@ input:-webkit-autofill {
     align-items: center;
     padding-left: 5px;
     margin: 0 0 1.2rem;
-    min-height: 4.5rem;
+    min-height: 3.5rem;
     /*overflow: auto;*/
     border-radius: 2px;
 }
@@ -139,6 +139,7 @@ input:-webkit-autofill {
 }
 .el-select .el-input{
     width: 8rem;
+    height: 2rem;
     margin-left: 10px;
 }
 .wrap-content{
@@ -279,4 +280,7 @@ input:-webkit-autofill {
     padding-left: 10px;
     font-size: 14px;
     background: #f7cfa7;
+}
+.app_wrap .el-select:nth-child(5) >.el-input{
+   width: 10rem;
 }
