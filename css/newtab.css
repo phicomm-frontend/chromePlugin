@@ -137,7 +137,10 @@ input:-webkit-autofill {
     -webkit-line-clamp:2;
 }
 .el-select .el-input{
-    width: 150px;
+    /*width: 150px;*/
+    /*margin-left: 10px;*/
+    width: 8rem;
+    height: 2.5rem;
     margin-left: 10px;
 }
 .wrap-content{
