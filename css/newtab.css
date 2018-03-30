@@ -16,10 +16,9 @@ html{
     overflow: hidden;
 }
 .header{
-    flex: 1 0 auto;
     position: relative;
     padding: 0 2.5rem 0 1.8rem;
-    height: 5.5rem;
+    height: 4.5rem;
     background-color: #fff;
     z-index: 500;
     display: -ms-flexbox;
@@ -31,16 +30,24 @@ html{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    flex: 0 0 auto;
+}
+.header img{
+    width: 13rem;
 }
 .search-area{
-    margin:1rem auto;
-    width:98%;
-    height:6rem;
-    background:#fff;
+    flex: 0 0 auto;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    margin: 2rem 1.8rem 2rem 1.8rem;
+    overflow: hidden;
+    background: #fff;
+    border-radius:2px;
 }
  .search-box{
     width:700px;
-     margin:1.5rem auto;
+    margin:2rem auto;
 }
 .search-logo{
     float:left;
@@ -90,7 +97,7 @@ input:-webkit-autofill {
     margin: 0 0 1.2rem;
     min-height: 3.5rem;
     overflow: auto;
-
+    border-radius: 2px;
 }
 .wrap-content ul{
     display: -ms-flexbox;
@@ -105,6 +112,7 @@ input:-webkit-autofill {
     display: flex;
     margin-bottom: 20px;
     background: #fff;
+    border-radius: 2px;
 }
 .wrap-content li span{
     margin-right: 25px;
