@@ -1,6 +1,9 @@
 html{
     font-size: 12px;
 }
+/*清除浮动代码*/
+.clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
+.clearfloat{zoom:1}
 .wrap{
     display: -ms-flexbox;
     display: flex;
@@ -13,9 +16,10 @@ html{
     overflow: hidden;
 }
 .header{
+    flex: 1 0 auto;
     position: relative;
     padding: 0 2.5rem 0 1.8rem;
-    height: 4.5rem;
+    height: 5.5rem;
     background-color: #fff;
     z-index: 500;
     display: -ms-flexbox;
@@ -59,6 +63,71 @@ html{
     font-size:16px;
     color:#fff;
 }
+.content{
+    flex: 1 1 auto;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+.app_wrap{
+    display: -ms-flexbox;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    padding-left: 5px;
+    margin: 0 0 1.2rem;
+    min-height: 3.5rem;
+    overflow: auto;
+
+}
+.wrap-content ul{
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 100%;
+}
+.wrap-content li{
+    min-height: 13rem;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+    background: #fff;
+}
+.wrap-content li span{
+    margin-right: 25px;
+    font-size: 1.2rem;
+}
+.activeImg{
+    flex: 0 1 auto;
+    padding: 20px 0 0 20px;
+}
+.active{
+    flex: 1 1 auto;
+    padding-left: 10px;
+    position: relative;
+}
+.des{
+    font-size: 14px;
+    height: 60px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+.el-select .el-input{
+    width: 150px;
+    margin-left: 10px;
+}
+.wrap-content{
+    flex: 1 1 auto;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+}
 .main-area{
     flex: 1 1 auto;
     display: -ms-flexbox;
@@ -67,6 +136,7 @@ html{
     margin: 1.8rem 1.2rem 0 1.8rem;
     overflow: hidden;
 }
+
 .entry-list ul{
     padding: 0.5rem 0 0 1.2rem;
 }
