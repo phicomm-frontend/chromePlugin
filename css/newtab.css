@@ -95,8 +95,8 @@ input:-webkit-autofill {
     align-items: center;
     padding-left: 5px;
     margin: 0 0 1.2rem;
-    min-height: 3.5rem;
-    overflow: auto;
+    min-height: 4.5rem;
+    /*overflow: auto;*/
     border-radius: 2px;
 }
 .wrap-content ul{
@@ -137,10 +137,7 @@ input:-webkit-autofill {
     -webkit-line-clamp:2;
 }
 .el-select .el-input{
-    /*width: 150px;*/
-    /*margin-left: 10px;*/
     width: 8rem;
-    height: 2.5rem;
     margin-left: 10px;
 }
 .wrap-content{
@@ -166,7 +163,6 @@ input:-webkit-autofill {
     display: inline-block;
     vertical-align: top;
     color: #000;
-    /* height: 86px; */
     width: 7.8rem;
     margin: 0.4rem 0.22rem;
     text-align: center;
