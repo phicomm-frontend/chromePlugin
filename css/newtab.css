@@ -113,6 +113,7 @@ input:-webkit-autofill {
 }
 .wrap-content li{
     width: 50%;
+    cursor: pointer;
     box-sizing: border-box;
     min-height: 13rem;
     display: -ms-flexbox;

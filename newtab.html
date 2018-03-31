@@ -336,7 +336,7 @@
                      element-loading-spinner="el-icon-loading"
                      element-loading-background="rgba(0, 0, 0, 0.8)">
                     <ul>
-                        <li v-for="item in tables">
+                        <li @click="jump(item.url)" v-for="item in tables">
                             <div class="activeImg">
                                 <img width="48px" height="48px" :src="item.owner.avatar">
                             </div>
