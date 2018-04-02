@@ -319,22 +319,28 @@
                                 :value="item.value">
                         </el-option>
                     </el-select>
-                    <el-select v-model="value" placeholder="请选择" filterable @change="valueChange">
-                        <el-option
-                                v-for="item in datas"
-                                :key="item.value"
-                                :label="item.label"
-                                :value="item.value">
-                        </el-option>
-                    </el-select>
+                    <div class="right-select">
+                        <el-select v-model="value" placeholder="请选择" filterable @change="valueChange">
+                            <el-option
+                                    v-for="item in datas"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value">
+                            </el-option>
+                        </el-select>
+                    </div>
                 </div>
-                <div class="wrap-content">
+                <div class="wrap-content"
+                     v-loading="loading"
+                     element-loading-text="拼命加载中"
+                     element-loading-spinner="el-icon-loading"
+                     element-loading-background="rgba(0, 0, 0, 0.8)">
                     <ul>
-                        <li v-for="item in tables">
+                        <li @click="jump(item.url)" v-for="item in tables">
                             <div class="activeImg">
                                 <img width="48px" height="48px" :src="item.owner.avatar">
                             </div>
-                            <div class="active">
+                            <div v-cloak class="active">
                                 <div  style="padding: 25px 0 10px 0;line-height:1.2;color: #0366d6;font-weight: 600;font-size: 16px">{{item.username + " / " + item.reponame}}</div>
                                 <div class="des"> {{item.description}}</div>
                                 <div style="">

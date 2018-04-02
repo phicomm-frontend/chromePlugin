@@ -1,6 +1,9 @@
 html{
     font-size: 12px;
 }
+[v-cloak] {
+    display: none;
+}
 /*清除浮动代码*/
 .clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
 .clearfloat{zoom:1}
@@ -95,24 +98,28 @@ input:-webkit-autofill {
     background: #fff;
     align-items: center;
     padding-left: 5px;
-    margin: 0 0 1.2rem;
+    margin: 0 0 1.2rem 10px;
     min-height: 3.5rem;
     /*overflow: auto;*/
     border-radius: 2px;
+    position:relative;
 }
 .wrap-content ul{
     display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     overflow: auto;
     width: 100%;
 }
 .wrap-content li{
+    width: 50%;
+    cursor: pointer;
+    box-sizing: border-box;
     min-height: 13rem;
     display: -ms-flexbox;
     display: flex;
+    padding-left: 10px;
     margin-bottom: 20px;
-    background: #fff;
     border-radius: 2px;
 }
 .wrap-content li span{
@@ -122,11 +129,13 @@ input:-webkit-autofill {
 .activeImg{
     flex: 0 1 auto;
     padding: 20px 0 0 20px;
+    background: #fff;
 }
 .active{
     flex: 1 1 auto;
     padding-left: 10px;
     position: relative;
+    background: #fff;
 }
 .des{
     font-size: 14px;
@@ -136,6 +145,14 @@ input:-webkit-autofill {
     display:-webkit-box;
     -webkit-box-orient:vertical;
     -webkit-line-clamp:2;
+}
+.right-select{
+    position: absolute;
+    right: 15px;
+}
+.right-select .el-select .el-input{
+    width: 12rem;
+    height: 2rem;
 }
 .el-select .el-input{
     width: 8rem;
@@ -221,7 +238,6 @@ input:-webkit-autofill {
     z-index: 250;
     display: flex;
     align-items: center;
-    margin-right: .8rem!important;
 }
 .source-selector{
     position: relative;
@@ -283,6 +299,8 @@ input:-webkit-autofill {
     font-size: 14px;
     background: #f7cfa7;
 }
-.app_wrap .el-select:nth-child(5) >.el-input{
-   width: 10rem;
+@media screen and (max-width: 1200px) {
+    .wrap-content li {
+        width: 100%;
+    }
 }
