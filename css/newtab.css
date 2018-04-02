@@ -267,9 +267,7 @@ input:-webkit-autofill {
 .entry-list{
     flex: 1 1 auto;
     position: relative;
-    /*overflow-y: hidden;*/
-    /*padding-right: .8rem;*/
-    overflow-y: scroll;
+    overflow-y: auto;
     background: #fff;
     margin-bottom: 8px;
 }
