@@ -68,6 +68,40 @@ var app = new Vue({
         }
     }
 });
+//点击小三角切换显示隐藏
+$("#triangle").unbind("click").click(function(){
+  $("#tabs").toggle();
+  if($(this).hasClass("selectUp")){
+    $(this).removeClass("selectUp").addClass("selectDown");
+  }else{
+    $(this).removeClass("selectDown").addClass("selectUp");
+  }
+});
+
+//点击空白处隐藏tabs
+// if($("ul").style.display="block"){
+//     $(document).click(function(){
+//       $("#tabs").hide();
+//     })
+// }
+
+// 选择谷歌和百度时做的操作
+$("li").click(function(){
+  if($(this).index()===1) {
+    $("#image").attr("src", "images/googlelogo.png");
+    $("#baidu-logo").attr("href","http://www.google.com");
+    $("#search").hide();
+    $("#triangle").removeClass("selectDown").addClass("selectUp");
+    $("#tabs").hide();
+    $("#google-search").show();
+  }else{
+    $("#image").attr("src", "https://gss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2017-09-26/352f1d243122cf52462a2e6cdcb5ed6d.png");
+    $("#search").show();
+    $("#triangle").removeClass("selectDown").addClass("selectUp");
+    $("#tabs").hide();
+    $("#google-search").hide();
+  }
+});
  function ajax(_this, param) {
      _this.loading = true;
      $.ajax({

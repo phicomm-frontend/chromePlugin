@@ -19,16 +19,29 @@
             <img src="images/logo.png" alt="">
         </div>
         <div class="search-area">
-            <div class="search-box clearfloat">
+            <div class="search-box clearfloat" style="position:relative">
                 <div class="search-logo">
-                    <a href="http://d.baidu.com/index.php?tn=sitesowang">
-                        <img src="http://www.baidu.com/img/logo-yy.gif" border=0 width=100 height=35 alt="百度">
+                    <a id="baidu-logo" href="http://d.baidu.com/index.php?tn=sitesowang">
+                        <img id="image"
+                             src="https://gss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2017-09-26/352f1d243122cf52462a2e6cdcb5ed6d.png"
+                             border=0 width=100 height=35 alt="百度">
                     </a>
+                    <a id="triangle" class="selectUp triangle"></a>
                 </div>
-                <div class="search">
+                <ul id="tabs">
+                    <li class="text"><img src="https://gss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2017-09-26/352f1d243122cf52462a2e6cdcb5ed6d.png" border=0 width=100 height=35 alt=""></li>
+                    <li class="text"><img src="images/googlelogo.png" alt="" border=0 width=100 height=35></li>
+                </ul>
+                <div id="search" class="search">
                     <form name="f" action=" http://www.baidu.com/s" target="_blank">
                         <input type="text" class="input" name="wd" id="kw" maxlength="100" autocomplete="on">
                         <input type="submit" class="button" id="su" value="百度一下">
+                    </form>
+                </div>
+                <div id="google-search" class="search" style="display:none">
+                    <form name="f" action="http://www.google.com/search" target="_blank">
+                        <input type="text" class="input" name="q" id="sbi" maxlength="100" autocomplete="on">
+                        <input type="submit" class="button" name="sa" id="sbb" value="搜索">
                     </form>
                 </div>
             </div>
