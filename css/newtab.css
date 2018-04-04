@@ -154,7 +154,7 @@ input:-webkit-autofill {
     width: 50%;
     cursor: pointer;
     box-sizing: border-box;
-    min-height: 13rem;
+    height: 13rem;
     display: -ms-flexbox;
     display: flex;
     padding-left: 10px;
