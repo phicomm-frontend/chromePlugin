@@ -44,13 +44,14 @@ html{
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    margin: 1.2rem 1.8rem 1.2rem 1.8rem;
+    margin: 1rem 1.8rem 1rem 1.8rem;
+    /*overflow: hidden;*/
     background: #fff;
     border-radius:2px;
 }
 .search-box{
     width:700px;
-    margin:1.5rem auto;
+    margin:1.3rem auto;
 }
 .search-box ul{
     height:100px;
@@ -60,14 +61,15 @@ html{
     top:3.5rem;
     z-index:999;
     display:none;
+    width: 116px;
+    left: -9px;
+    border-radius: 2px;
 }
 .search-box ul li{
-    font-weight:bold;
-    width:100px;
-    position:relative;
-    line-height:50px;
-    text-align:center;
-    border-bottom:1px solid #ddd;
+    font-weight: bold;
+    width: 100px;
+    position: relative;
+    text-align: center;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -142,7 +144,8 @@ input:-webkit-autofill {
     background: #fff;
     align-items: center;
     padding-left: 5px;
-    margin: 0 0 1.2rem 10px;
+    /*margin: 0 0 1.2rem 10px;*/
+    margin: 0 0 4px 10px;
     min-height: 3.5rem;
     /*overflow: auto;*/
     border-radius: 2px;
@@ -154,6 +157,7 @@ input:-webkit-autofill {
     flex-wrap: wrap;
     overflow: auto;
     width: 100%;
+    padding-left: 8px;
 }
 .wrap-content li{
     width: 50%;
@@ -162,8 +166,9 @@ input:-webkit-autofill {
     height: 13rem;
     display: -ms-flexbox;
     display: flex;
-    padding-left: 10px;
-    margin-bottom: 20px;
+    padding-left: 2px;
+    margin-bottom: 2px;
+    border-radius: 2px;
     border-radius: 2px;
 }
 .wrap-content li span{
@@ -174,12 +179,14 @@ input:-webkit-autofill {
     flex: 0 1 auto;
     padding: 20px 0 0 20px;
     background: #fff;
+    border-radius: 2px;
 }
 .active{
     flex: 1 1 auto;
     padding-left: 10px;
     position: relative;
     background: #fff;
+    border-radius: 2px;
 }
 .des{
     font-size: 14px;
@@ -279,7 +286,8 @@ input:-webkit-autofill {
     user-select: none;
 }
 .source-navbar{
-    margin: 0 0 1.2rem;
+    /*margin: 0 0 1.2rem;*/
+    margin: 0 0 4px;
     min-height: 3.5rem;
     background-color: #fff;
     border-radius: 2px;
@@ -355,6 +363,17 @@ input:-webkit-autofill {
     padding-left: 10px;
     font-size: 14px;
     background: #f7cfa7;
+}
+.activeImg img{
+    border-radius: 3px;
+}
+.wrap .el-input--suffix .el-input__inner{
+    background-color: #f8f9fb;
+    border: 0;
+}
+
+.wrap .el-loading-mask{
+    left:10px;
 }
 @media screen and (max-width: 1200px) {
     .wrap-content li {
