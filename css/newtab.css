@@ -53,7 +53,7 @@ html{
     width:700px;
     margin:1.3rem auto;
 }
-.search-box ul{
+.search-box ul.tabs{
     height:100px;
     background:#fff;
     border:1px solid #d2d2d2;
@@ -65,7 +65,7 @@ html{
     left: -9px;
     border-radius: 2px;
 }
-.search-box ul li{
+.search-box ul.tabs li{
     font-weight: bold;
     width: 100px;
     position: relative;
@@ -76,7 +76,7 @@ html{
     height: 50px;
     padding: 0 5px;
 }
-.search-box ul li:last-child{
+.search-box ul.tabs li:last-child{
     border-bottom:none;
 }
 .search-logo{
@@ -107,6 +107,26 @@ html{
     border: 6px solid transparent;
     border-bottom: 6px solid #787C7F;
 }
+.dropDown{
+    z-index: 9999;
+    background: #fff;
+    position: absolute;
+    top: 35px;
+    left:125px;
+    width: 407px;
+    border: 1px solid #eee;
+    border-top: none;
+}
+.dropDown li {
+    height: 25px;
+    line-height: 25px;
+    padding-left:10px;
+}
+.dropDown li:hover {
+    background: #eee;
+    cursor: pointer;
+}
+
 .input{
     float:left;
     width:400px;
@@ -168,7 +188,6 @@ input:-webkit-autofill {
     display: flex;
     padding-left: 2px;
     margin-bottom: 2px;
-    border-radius: 2px;
     border-radius: 2px;
 }
 .wrap-content li span{

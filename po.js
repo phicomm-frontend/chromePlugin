@@ -37,8 +37,27 @@ var app = new Vue({
             tables: []
         }
     },
+    mounted: function () {
+      var src=localStorage.getItem("src");
+      $("#image").attr("src",src);
+      console.log(src.slice(0,5));
+      if(src.slice(0,5)==="image"){
+        $("#search").hide();
+        $("#google-search").show();
+        $("#baidu-logo").attr("href","http://www.google.com");
+      }
+    },
     created:function () {
         ajax(this,this.param);
+
+        // if(src.slice(0,4)==="https"){
+        //   $("#search").show();
+        //   $("#google-search").hide();
+        // }else{
+        //   $("#google-search").show();
+        //   $("#baidu-logo").attr("href","http://www.google.com");
+        //   $("#search").hide();
+        // }
     },
     computed: {
         param: function () {
@@ -66,7 +85,7 @@ var app = new Vue({
         },
         valueChange: function (val) {
             ajax(this,this.param);
-        }
+        },
     }
 });
 //点击小三角切换显示隐藏
@@ -77,6 +96,33 @@ $("#triangle").unbind("click").click(function(){
   }else{
     $(this).removeClass("selectDown").addClass("selectUp");
   }
+});
+
+ document.getElementById("kw").onkeyup=function(){
+  var script=document.createElement("script");
+  script.src='https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+this.value+'&cb=fn1';
+  document.body.appendChild(script);
+  document.body.removeChild(script);
+};
+function fn1 (data) {
+  var dropDown=document.getElementById("dropDown");
+  var str='';
+  if(!data.s.length){
+    dropDown.style.display='none';
+    dropDown.innerHTML='';
+  }else{
+    dropDown.style.display='block';
+
+    for(var i=0;i<data.s.length;i++){
+      str+='<li>'+data.s[i]+'</li>';
+    }
+    dropDown.innerHTML=str;
+  }
+}
+//点击时li可能不存在，故用事件委派
+$(".dropDown li").live('click',function(){
+  console.log($(this).index());
+  window.open("http://www.baidu.com/s?wd="+$(this).html());
 });
 
 //点击空白处隐藏tabs
@@ -90,6 +136,7 @@ $("#triangle").unbind("click").click(function(){
 $("li").click(function(){
   if($(this).index()===1) {
     $("#image").attr("src", "images/googlelogo.png");
+    localStorage.setItem("src","images/googlelogo.png");
     $("#baidu-logo").attr("href","http://www.google.com");
     $("#search").hide();
     $("#triangle").removeClass("selectDown").addClass("selectUp");
@@ -97,6 +144,7 @@ $("li").click(function(){
     $("#google-search").show();
   }else{
     $("#image").attr("src", "https://gss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2017-09-26/352f1d243122cf52462a2e6cdcb5ed6d.png");
+    localStorage.setItem("src","https://gss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2017-09-26/352f1d243122cf52462a2e6cdcb5ed6d.png");
     $("#search").show();
     $("#triangle").removeClass("selectDown").addClass("selectUp");
     $("#tabs").hide();
