@@ -345,3 +345,38 @@ input:-webkit-autofill {
         width: 100%;
     }
 }
+.project-column{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align:center;
+}
+.project-li{
+    flex: 1 1 auto;
+    width: 9rem;
+    cursor: pointer;
+}
+.el-dialog__wrapper{
+    z-index: 12000 !important;
+}
+.project-li:hover{
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+}
+.project-li:active{
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+}
+.project-column div{
+    flex: 1 1 auto;
+}
+.projectIcon{
+    position: absolute;
+    z-index: 999;
+    padding: 3px;
+    right: 8rem;
+}
+.project .el-input{
+    width: 8.5rem !important;
+}
+.project .el-input__inner{
+    border: none;
+}

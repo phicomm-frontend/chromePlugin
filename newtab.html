@@ -17,6 +17,19 @@
     <div class="wrap">
         <div class="header">
             <img src="images/logo.png" alt="">
+            <div v-cloak class="project right-select">
+                <span class="projectIcon"><i style="font-size: 20px;color:#409EFF" :class="projectClass"></i></span>
+                <el-select v-model="project" placeholder="请选择" @change="projectChange">
+                    <el-option
+                            v-for="item in selectType"
+                            :key="item.value"
+                            :label="item.label"
+                            :value="item.value">
+                        <span style="float: left"><i style="width:26px;padding: 0 2px;font-size: 20px;margin-right: 15px;color:#409EFF" :class="item.class"></i></span>
+                        <span >{{ item.label }}</span>
+                    </el-option>
+                </el-select>
+            </div>
         </div>
         <div class="search-area">
             <div class="search-box clearfloat" style="position:relative">
@@ -368,6 +381,23 @@
                 </div>
             </div>
         </div>
+        <el-dialog
+                title="请选择你需要关注的..."
+                :close-on-click-modal="false"
+                :visible.sync="dialogVisible"
+                width="50rem">
+            <ul style="display: flex;margin: 30px 0">
+                <li class='project-li' v-for="item in selectType" @click="majorChange(item)">
+                    <div class="project-column">
+                        <div style="padding-top: 20px"><i style="font-size: 8rem;color:#007fff" :class="item.class"></i></div>
+                        <div style="padding: 20px;">{{item.label}}</div>
+                    </div>
+                </li>
+            </ul>
+            <span slot="footer" class="dialog-footer">
+                <el-button @click="cancel">取 消</el-button>
+            </span>
+        </el-dialog>
     </div>
 </div>
 <script src="jquery-1.8.3.js"></script>
