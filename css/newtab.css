@@ -55,15 +55,15 @@ html{
     margin:1rem auto;
 }
 .search-box ul{
+    height:100px;
+    background:#fff;
+    border:1px solid #d2d2d2;
+    position:absolute;
+    top:3.5rem;
+    z-index:999;
+    display:none;
     width: 116px;
-    height: 100px;
-    background: #fff;
-    position: absolute;
-    top: 3.5rem;
-    z-index: 999;
     left: -9px;
-    display: none;
-    border: 1px solid #dfe4ed;
     border-radius: 2px;
 }
 .search-box ul li{
@@ -72,7 +72,13 @@ html{
     position: relative;
     text-align: center;
     cursor: pointer;
-    padding: 8px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 5px;
+}
+.search-box ul li:last-child{
+    border-bottom:none;
 }
 .search-logo{
     float:left;
@@ -231,6 +237,10 @@ input:-webkit-autofill {
     width: 7.8rem;
     margin: 0.4rem 0.06rem;
     text-align: center;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 .entry-list li a{
     display: block;
@@ -325,6 +335,13 @@ input:-webkit-autofill {
 .nav-inner li:hover{
     border-radius: 5px;
     box-shadow: 0px 2px 16px #ccc;
+    transform: translateY(-6px);
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 .nav-inner .logo{
     width: 100%;
