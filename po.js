@@ -184,7 +184,7 @@ $("li").click(function(){
              _this.loading = false;
              _this.tables = data.data;
              if (_this.tables.length > 0) {
-                 _this.tips = "无法加载更多..."
+                 _this.tips = "已显示全部内容"
              } else {
                  _this.tips = "无数据..."
              }
