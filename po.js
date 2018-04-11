@@ -82,6 +82,7 @@ var app = new Vue({
         if (!localStorage.getItem("projectPlugin")) {
             this.dialogVisible = true;
         }
+        this.projectChange(this.project);
         ajax(this,this.param);
 
         // if(src.slice(0,4)==="https"){
