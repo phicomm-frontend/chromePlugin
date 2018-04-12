@@ -9,7 +9,7 @@
     <!-- 引入样式 -->
     <link rel="stylesheet" href="element-ui/lib/theme-chalk/index.css">
     <!-- 引入组件库 -->
-    <script src="vue.min.js"></script>
+    <script src="js/vue.min.js"></script>
     <script src="element-ui/lib/index.js"></script>
 </head>
 <body>
@@ -377,7 +377,7 @@
             </div>
             <div class="content">
                 <div class="app_wrap">
-                    <img width="34px" height="34px" src="https://e-gold-cdn.xitu.io/static/github.png?9140c37" alt="">
+                    <img width="30px" height="30px" style="border-radius:2px;"src="https://e-gold-cdn.xitu.io/static/github.png?9140c37" alt="">
                     <el-select v-model="option" placeholder="请选择" @change="optionChange">
                         <el-option
                                 v-for="item in options"
@@ -426,7 +426,7 @@
                             <div v-cloak class="active">
                                 <div  style="padding: 25px 0 10px 0;line-height:1.2;color: #0366d6;font-weight: 600;font-size: 16px">{{item.username + " / " + item.reponame}}</div>
                                 <div class="des"> {{item.description}}</div>
-                                <div style="">
+                                <div style="" class="repo-meta">
                                     <span><i class="fa fa-star"></i> {{item.starCount}}</span>
                                     <span><i class="fa fa-code-fork"></i> {{item.forkCount}}</span>
                                     <span><i class="fa fa-circle" :style="{color:item.langColor}"></i> {{item.lang}}</span>
@@ -439,14 +439,15 @@
             </div>
         </div>
         <el-dialog
-                title="请选择你需要关注的..."
+                title="欢迎使用PhiTab浏览器插件"
                 :close-on-click-modal="false"
                 :visible.sync="dialogVisible"
                 width="50rem">
+            <p class="selectTopic">请选择你感兴趣的分类</p>
             <ul style="display: flex;margin: 30px 0">
                 <li class='project-li' v-for="item in selectType" @click="majorChange(item)">
                     <div class="project-column">
-                        <div style="padding-top: 20px"><i style="font-size: 8rem;color:#007fff" :class="item.class"></i></div>
+                        <div style="padding-top: 20px"><i style="font-size: 5rem;color:rgb(235, 158, 5)" :class="item.class"></i></div>
                         <div style="padding: 20px;">{{item.label}}</div>
                     </div>
                 </li>
@@ -457,7 +458,7 @@
         </el-dialog>
     </div>
 </div>
-<script src="jquery-1.8.3.js"></script>
+<script src="js/jquery-1.8.3.js"></script>
 <script src="po.js"></script>
 </body>
 </html>

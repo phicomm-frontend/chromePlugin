@@ -21,11 +21,12 @@ html{
 .header{
     position: relative;
     padding: 0 2.5rem 0 1.8rem;
-    height: 4.5rem;
-    background-color: #fff;
+    height: 3.2rem;
+    background-color: #ffffff;
     z-index: 500;
     display: -ms-flexbox;
     display: flex;
+    box-shadow: 1px 1px 1px #c5c5c5;
     -ms-flex-align: center;
     align-items: center;
     cursor: default;
@@ -36,7 +37,7 @@ html{
     flex: 0 0 auto;
 }
 .header img{
-    width: 13rem;
+    width: 11rem;
     padding-left: 0.5rem;
 }
 .search-area{
@@ -44,14 +45,14 @@ html{
     display: -ms-flexbox;
     display: flex;
     position: relative;
-    margin: 1rem 1.8rem 1rem 1.8rem;
-    /*overflow: hidden;*/
+    margin: 1.2rem 1.8rem 1.2rem 1.8rem;
+    /* overflow: hidden; */
     background: #fff;
-    border-radius:2px;
+    border-radius: 2px;
 }
 .search-box{
     width:700px;
-    margin:1.3rem auto;
+    margin:1.5rem auto;
 }
 .search-box ul.tabs{
     height:100px;
@@ -108,7 +109,7 @@ html{
     border-bottom: 6px solid #787C7F;
 }
 .dropDown{
-    z-index: 9999;
+    z-index: 99;
     background: #fff;
     position: absolute;
     top: 35px;
@@ -166,7 +167,7 @@ input:-webkit-autofill {
     padding-left: 5px;
     /*margin: 0 0 1.2rem 10px;*/
     margin: 0 0 4px 10px;
-    min-height: 3.5rem;
+    min-height: 3rem;
     /*overflow: auto;*/
     border-radius: 2px;
     position:relative;
@@ -218,7 +219,7 @@ input:-webkit-autofill {
 }
 .right-select{
     position: absolute;
-    right: 15px;
+    right: 1.8rem;
 }
 .right-select .el-select .el-input{
     width: 12rem;
@@ -307,7 +308,7 @@ input:-webkit-autofill {
 .source-navbar{
     /*margin: 0 0 1.2rem;*/
     margin: 0 0 4px;
-    min-height: 3.5rem;
+    min-height: 3rem;
     background-color: #fff;
     border-radius: 2px;
     z-index: 250;
@@ -329,8 +330,8 @@ input:-webkit-autofill {
     align-items: center;
 }
 .curr img{
-    width: 2.833rem;
-    height: 2.833rem;
+    width: 30px;
+    height: 30px;
     border-radius: 2px;
     margin: 0 1rem 0 .4rem;
 }
@@ -371,6 +372,7 @@ input:-webkit-autofill {
 .nav-inner .logo img{
     width: 50px;
     height: 50px;
+    border-radius: 2px;
 }
 .wrap .el-input__inner {
     height: 100%;
@@ -385,6 +387,9 @@ input:-webkit-autofill {
 }
 .activeImg img{
     border-radius: 3px;
+}
+.repo-meta{
+    color: #666;
 }
 .wrap .el-input--suffix .el-input__inner{
     background-color: #f8f9fb;
@@ -408,10 +413,21 @@ input:-webkit-autofill {
 .project-li{
     flex: 1 1 auto;
     width: 9rem;
+    margin: 0 .8rem 0;
+    border: 1px solid #efe5d4;
+    border-radius: 2px;
     cursor: pointer;
 }
 .el-dialog__wrapper{
     z-index: 12000 !important;
+}
+.el-dialog__header{
+    background: #eb9e05;
+    text-align: center;
+}
+.wrap .el-dialog__title{
+    color: #ffffff;
+    text-align: center;
 }
 .project-li:hover{
     box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
@@ -426,11 +442,27 @@ input:-webkit-autofill {
     position: absolute;
     z-index: 999;
     padding: 3px;
-    right: 8rem;
+    right: 8.6rem;
 }
 .project .el-input{
     width: 8.5rem !important;
 }
 .project .el-input__inner{
     border: none;
+}
+.wrap .el-select-dropdown__item span {
+    line-height: 34px!important;
+    font-weight: normal;
+}
+.selectTopic{
+    font-size: 1.433rem;
+    text-align: center;
+    font-family: PingFang SC,-apple-system,Arial,Microsoft YaHei,Microsoft JhengHei,Helvetica Neue,sans-serif;
+    color: #000;
+}
+.wrap .el-dialog__headerbtn .el-dialog__close{
+    color: #ecce92;
+}
+.wrap .el-dialog__body{
+    color:#000;
 }
