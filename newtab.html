@@ -321,7 +321,7 @@
             </div>
             <div class="content">
                 <div class="app_wrap">
-                    <img width="34px" height="34px" src="https://e-gold-cdn.xitu.io/static/github.png?9140c37" alt="">
+                    <img width="30px" height="30px" style="border-radius:2px;"src="https://e-gold-cdn.xitu.io/static/github.png?9140c37" alt="">
                     <el-select v-model="option" placeholder="请选择" @change="optionChange">
                         <el-option
                                 v-for="item in options"
@@ -383,14 +383,15 @@
             </div>
         </div>
         <el-dialog
-                title="请选择你需要关注的..."
+                title="欢迎使用PhiTab浏览器插件"
                 :close-on-click-modal="false"
                 :visible.sync="dialogVisible"
                 width="50rem">
+            <p class="selectTopic">请选择你感兴趣的分类</p>
             <ul style="display: flex;margin: 30px 0">
                 <li class='project-li' v-for="item in selectType" @click="majorChange(item)">
                     <div class="project-column">
-                        <div style="padding-top: 20px"><i style="font-size: 8rem;color:#007fff" :class="item.class"></i></div>
+                        <div style="padding-top: 20px"><i style="font-size: 5rem;color:rgb(235, 158, 5)" :class="item.class"></i></div>
                         <div style="padding: 20px;">{{item.label}}</div>
                     </div>
                 </li>
