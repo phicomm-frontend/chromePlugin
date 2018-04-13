@@ -23,7 +23,7 @@ var app = new Vue({
                 },
                 {
                     value: '4',
-                    label: 'IOS',
+                    label: 'iOS',
                     status: "swift",
                     class: 'fa fa-apple'
                 },

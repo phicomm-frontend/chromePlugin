@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "PhiTab",
-  "description": "斐讯前端团队协力为公司小伙伴开发的一款标签页插件，包含百度搜索，公司内外网址导航，热门github项目推荐功能，让你更快捷轻松的办公，赶紧来尝试一下吧～。",
+  "description": "斐讯深研前端团队协力为公司小伙伴开发的一款标签页插件，包含百度谷歌搜索，公司内外网址导航，热门github项目推荐功能，让你更快捷轻松的办公，赶紧来尝试一下吧～。",
   "version": "1.4",
   "icons": {
     "128": "images/logos.png",
@@ -19,7 +19,7 @@
     "persistent": true,
     "scripts": [ "background.js" ]
   },
-  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://sp0.baidu.com/ 'unsafe-eval'; object-src 'self'",
   "permissions": [
     "contextMenus",
     "tabs",
