@@ -117,6 +117,7 @@ html{
     width: 407px;
     border: 1px solid #eee;
     border-top: none;
+    display: none;
 }
 .dropDown li {
     height: 25px;
