@@ -69,13 +69,20 @@ var app = new Vue({
         }
     },
     mounted: function () {
-      var src=localStorage.getItem("src");
-      $("#image").attr("src",src);
-      console.log(src.slice(0,5));
-      if(src.slice(0,5)==="image"){
-        $("#search").hide();
+      if (!localStorage.getItem("src")) {
+        $("#image").attr("src", "images/baidu.png");
+        $(".search-box").show();
+      }
+      if (localStorage.getItem("src") === "images/googlelogo.png") {
+        console.log(222)
+        $("#image").attr("src", "images/googlelogo.png");
+        $(".search-box").show();
         $("#google-search").show();
-        $("#baidu-logo").attr("href","http://www.google.com");
+        $("#search").hide();
+        $("#baidu-logo").attr("href", "http://www.google.com");
+      } else if (localStorage.getItem("src") === "images/baidu.png") {
+        $("#image").attr("src", "images/baidu.png");
+        $(".search-box").show();
       }
     },
     created:function () {
@@ -84,15 +91,6 @@ var app = new Vue({
         }
         this.projectChange(this.project);
         ajax(this,this.param);
-
-        // if(src.slice(0,4)==="https"){
-        //   $("#search").show();
-        //   $("#google-search").hide();
-        // }else{
-        //   $("#google-search").show();
-        //   $("#baidu-logo").attr("href","http://www.google.com");
-        //   $("#search").hide();
-        // }
     },
     computed: {
         param: function () {
@@ -196,11 +194,9 @@ $(".dropDown li").live('click',function(){
 });
 
 //点击空白处隐藏tabs
-// if($("ul").style.display="block"){
-//     $(document).click(function(){
-//       $("#tabs").hide();
-//     })
-// }
+    $(document).click(function(){
+      $("#dropDown").hide();
+    })
 
 // 选择谷歌和百度时做的操作
 $("li").click(function(){
@@ -213,8 +209,8 @@ $("li").click(function(){
     $("#tabs").hide();
     $("#google-search").show();
   }else{
-    $("#image").attr("src", "https://gss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2017-09-26/352f1d243122cf52462a2e6cdcb5ed6d.png");
-    localStorage.setItem("src","https://gss0.bdstatic.com/5bVWsj_p_tVS5dKfpU_Y_D3/res/r/image/2017-09-26/352f1d243122cf52462a2e6cdcb5ed6d.png");
+    $("#image").attr("src", "images/baidu.png");
+    localStorage.setItem("src","images/baidu.png");
     $("#search").show();
     $("#triangle").removeClass("selectDown").addClass("selectUp");
     $("#tabs").hide();
