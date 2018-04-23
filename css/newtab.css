@@ -220,7 +220,7 @@ input:-webkit-autofill {
 }
 .right-select{
     position: absolute;
-    right: 1.8rem;
+    right: 4.6rem;
 }
 .right-select .el-select .el-input{
     width: 12rem;
@@ -443,7 +443,7 @@ input:-webkit-autofill {
     position: absolute;
     z-index: 999;
     padding: 3px;
-    right: 8.6rem;
+    right: 8.8rem;
 }
 .project .el-input{
     width: 8.5rem !important;
@@ -469,4 +469,11 @@ input:-webkit-autofill {
 }
 .wrap .el-loading-mask{
     z-index: 100;
+}
+.wrap .github{
+    position: absolute;
+    right: 2rem;
+    font-size: 1.5rem;
+    top: 28%;
+    color: #409eff;
 }
