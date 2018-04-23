@@ -477,3 +477,9 @@ input:-webkit-autofill {
     top: 28%;
     color: #e4e7ea;
 }
+.logo{
+    font-family: museo-slab,'Microsoft YaHei',Georgia,"Times New Roman",Times,serif;
+    font-size: 1.8rem;
+    color: #f08300;
+    font-weight: BOLD;
+}
