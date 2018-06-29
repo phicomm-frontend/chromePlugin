@@ -51,7 +51,7 @@ html{
     border-radius: 2px;
 }
 .search-box{
-    width:700px;
+    width:780px;
     margin:1.5rem auto;
 }
 .search-box ul.tabs{
@@ -88,7 +88,7 @@ html{
     float:left;
 }
 .search-logo .triangle{
-    margin-top:1.8rem;
+    margin-top:2.2rem;
     margin-left:0.5rem;
     cursor: pointer;
 }
@@ -112,15 +112,16 @@ html{
     z-index: 99;
     background: #fff;
     position: absolute;
-    top: 35px;
-    left:125px;
-    width: 407px;
+    top: 41px;
+    left:124px;
+    width: 458px;
     border: 1px solid #eee;
     border-top: none;
     display: none;
 }
 .dropDown li {
     height: 25px;
+    font-size:14px;
     line-height: 25px;
     padding-left:10px;
 }
@@ -131,8 +132,8 @@ html{
 
 .input{
     float:left;
-    width:400px;
-    height:32px;
+    width:450px;
+    height:38px;
     border:1px solid #3385ff;
     padding-left:8px;
     outline:none;
@@ -146,7 +147,7 @@ input:-webkit-autofill {
 .button{
     float:left;
     width:100px;
-    height:34px;
+    height:40px;
     border:none;
     background:#3385ff;
     font-size:16px;
