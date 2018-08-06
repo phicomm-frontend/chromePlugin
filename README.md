@@ -5,4 +5,4 @@
 
 此插件已经上架google应用商店，可以在谷歌浏览器的应用商店中搜索“PhiTab”，使用
 
-![1533532118835](./assets/1.png)
+![1533532118835](https://github.com/Tonnywei/chromePlugin/blob/develop/assets/1.png)
